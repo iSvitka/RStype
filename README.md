@@ -1,1 +1,1 @@
-(Link to RStype)[https://iSvitka.github.io/RStype/]
+[Link to RStype](https://iSvitka.github.io/RStype/)
