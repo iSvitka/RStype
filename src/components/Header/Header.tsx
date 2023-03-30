@@ -44,25 +44,25 @@ export const Header = ()=> {
                             <h1>RStype</h1>
                             <h1>RSt</h1>
                         </Link>
-                        <Link to='/rs-clone/' onClick={restartGame}>
+                        <Link to='/RStype/' onClick={restartGame}>
                             <Keyboard />
                         </Link>
-                        <Link to='/rs-clone/rating' onClick={restartGame}>
+                        <Link to='/RStype/rating' onClick={restartGame}>
                             <Crown />
                         </Link>
-                        <Link to='/rs-clone/info' onClick={restartGame}>
+                        <Link to='/RStype/info' onClick={restartGame}>
                             <InfoIcon />
                         </Link>
-                        <Link to='/rs-clone/settings' onClick={restartGame}>
+                        <Link to='/RStype/settings' onClick={restartGame}>
                             <Gear />
                         </Link>
                     </div>
                     <div className={styles.rightNav}>
-                        <Link to='/rs-clone/user' onClick={restartGame}>
+                        <Link to='/RStype/user' onClick={restartGame}>
                             <UserIcon/>
                         </Link>
                         {!!token && 
-                            <Link to='/rs-clone/' onClick={logOut}>
+                            <Link to='/RStype/' onClick={logOut}>
                                 <Logout/>
                             </Link>
                         }
