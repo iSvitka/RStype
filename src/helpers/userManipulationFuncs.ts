@@ -1,7 +1,7 @@
 import { SettingsInterface } from "./defaultSettings"
 
 export const getSettings = async (token: string) => {
-    const settings: SettingsInterface = await fetch(`https://rs-clone-backend-production.up.railway.app/get_settings`, {
+    const settings: SettingsInterface = await fetch(`https://rstype-backend-production.up.railway.app/get_settings`, {
         headers: {
             'Authorization': `Bearer ${token}`
         }
@@ -11,7 +11,8 @@ export const getSettings = async (token: string) => {
 }
 
 export const setSettings = async (token: string, setGroup: Partial<SettingsInterface>) => {
-    const response = await fetch(`https://rs-clone-backend-production.up.railway.app/set_settings`, {
+    const response = await fetch(`https://rstype-backend-production.up.railway.app/set_settings`, {
+        // mode: 'no-cors',
         method: 'PATCH',
         headers: {
             'Authorization': `Bearer ${token}`,

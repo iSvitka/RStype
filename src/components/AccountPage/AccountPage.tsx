@@ -20,7 +20,7 @@ export function AccountPage() {
 
     useEffect(() => {
         const connectFunc = async () => {
-            const info: UserInfo = await fetch(`https://rs-clone-backend-production.up.railway.app/get_profile?username=${username}`, {
+            const info: UserInfo = await fetch(`https://rstype-backend-production.up.railway.app/get_profile?username=${username}`, {
                 method: 'GET',
                 headers: {
                     "Authorization": `Bearer ${token}`,

@@ -5,7 +5,7 @@ interface RegErrorObg {
 }
 
 export const tryLogin = async (nameState: string, passState: string) => {
-    const token: UserTokenObj = await fetch(`https://rs-clone-backend-production.up.railway.app/login`, {
+    const token: UserTokenObj = await fetch(`https://rstype-backend-production.up.railway.app/login`, {
         method: 'POST', 
         headers: {
             "Content-type":  "application/json"
@@ -27,7 +27,7 @@ export const tryLogin = async (nameState: string, passState: string) => {
 }
 
 export const tryRegister = async (nameState: string, passState: string) => {
-    const response = await fetch(`https://rs-clone-backend-production.up.railway.app/registration`, {
+    const response = await fetch(`https:/rstype-backend-production.up.railway.app/registration`, {
         method: 'POST',
         headers: {
             "Content-type":  "application/json"
