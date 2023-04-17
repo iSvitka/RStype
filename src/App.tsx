@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 import { useContext, useEffect, useCallback } from 'react';
 import { TestComponent } from './components/TestComponent/TestComponent';
 import { MainContext } from './context/MainContext/MainContext';
@@ -23,6 +23,7 @@ if(!localStorage.getItem('settings')) {
 export const App = () => {
     const {isFinished} = useContext(MainContext);
     const {token, username, updateTheme, updateFont, updateToken, updateUsername, isLoaded, setLoaded} = useContext(PageContext)
+    const navigate = useNavigate()
 
     const checkAuth = useCallback(() => {
         const localToken = localStorage.getItem('authToken')
@@ -71,6 +72,12 @@ export const App = () => {
             asyncCheckFunc()
         }
     }, [checkAuth, checkSettings, isLoaded, setLoaded])
+
+    useEffect(() => {
+        if(window.location.hash) {
+            navigate(`/RStype/${window.location.hash.split('#/')[1]}`)
+        }
+    }, [navigate])
     
     return (
         <Routes>
